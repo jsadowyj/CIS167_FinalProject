@@ -22,10 +22,8 @@ func isValidInput(input string) bool {
 }
 
 func isValidBoolean(input string) bool {
-	if _, err := strconv.ParseBool(input); err == nil {
-		return true
-	}
-	return false
+	_, err := strconv.ParseBool(input)
+	return err == nil
 }
 
 func main() {
